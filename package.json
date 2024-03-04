@@ -1,0 +1,16 @@
+{
+  "dependencies": { "@prisma/client": "^5.9.1" },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prisma": "^5.9.1"
+  },
+  "name": "rinha_ts",
+  "module": "server.ts",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "bun build --target=bun ./server.ts --outdir ./build"
+  }
+}

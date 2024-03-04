@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  app:
+    image: rinha:0.1
+    ports:
+      - 9999:9999
+  postgres:
+    image: postgres:16
+    environment:
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=rinha
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pg_hba.conf:/usr/share/postgresql/16/pg_hba.conf
+    command: postgres -c checkpoint_timeout=600 -c max_wal_size=4096 -c synchronous_commit=0 -c full_page_writes=0
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: "1"
+    #       memory: "250MB"
+networks:
+  default:
+    driver: bridge
+    name: rinha-nginx-2024q1
