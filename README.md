@@ -1,15 +1,8 @@
-# rinha_ts
+# rinha de backend 2024 q1
 
-To install dependencies:
+Proposta de solução ao desafio [rinha-de-backend-2024-q1](https://github.com/zanfranceschi/rinha-de-backend-2024-q1/tree/main?tab=readme-ov-file#rinha-de-backend---2024q1).
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.0.26. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Tecnologias utilizadas:
+- bun: para api
+- prisma: para orm
+- nodejs: porque o prisma precisa :/

@@ -1,12 +1,10 @@
 import ClienteService from './src/cliente.service'
-import initDB from './prisma/init-db'
 import { type TransacaoCreateBody } from "./prisma/schema.types"
 
 
 const POST_CLIENTE = /\/clientes\/(\d+)\/transacoes/;
 const EXTRATO_PATH = /\/clientes\/(\d+)\/extrato/;
-
-initDB();
+console.log("Tudo certo!!")
 
 function salvaTransacao(req: Request, url: URL): Response | Promise< Response > {
   return req.json().then((transacao: TransacaoCreateBody) => {

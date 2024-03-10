@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Cliente {
-  idCliente Int         @id @default(autoincrement())
+  idCliente Int         @id @default(autoincrement()) @map("id_cliente")
   nome       String      @db.VarChar(256)
   limite     Int
   transacoes Transacao[]
